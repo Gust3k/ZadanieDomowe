@@ -14,9 +14,10 @@ import java.util.concurrent.TimeUnit;
         @BeforeSuite
         public void setUp() {
             // Wskazanie zewnętrznego pliku drivera dla przeglądarki Firefox/Chrome
+            String userPath = System.getProperty("user.dir");
             System.setProperty(
-                    "webdriver.gecko.driver",
-                    "C:\\Users\\cikow\\Desktop\\Selenium zewnętrzne conectory\\geckodriver-v0.24.0-win64\\geckodriver.exe"
+                    "webdriver.gecko.driver",userPath+
+                    "\\src\\main\\resources\\geckodriver.exe"
             );
             //Stworzenie i zainicjalizowanie obiektu DRIVER przeglądarką Firefox/Chrome
             driver = new FirefoxDriver();
